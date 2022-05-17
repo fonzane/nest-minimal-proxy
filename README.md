@@ -11,8 +11,11 @@ This project was generated using [Nx](https://nx.dev).
 ## Quick Start & Documentation
 
 clone this repo `git clone https://github.com/fonzane/nest-minimal-proxy`
+
 install dependencies `npm install`
+
 run frontend dev-server `ng serve nest-minimal-proxy`
+
 run backend dev-server `ng serve api`
 
 [Nx Documentation](https://nx.dev/angular)
