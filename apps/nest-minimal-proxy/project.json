@@ -1,0 +1,95 @@
+{
+  "projectType": "application",
+  "sourceRoot": "apps/nest-minimal-proxy/src",
+  "prefix": "nest-minimal-proxy",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/nest-minimal-proxy",
+        "index": "apps/nest-minimal-proxy/src/index.html",
+        "main": "apps/nest-minimal-proxy/src/main.ts",
+        "polyfills": "apps/nest-minimal-proxy/src/polyfills.ts",
+        "tsConfig": "apps/nest-minimal-proxy/tsconfig.app.json",
+        "assets": [
+          "apps/nest-minimal-proxy/src/favicon.ico",
+          "apps/nest-minimal-proxy/src/assets"
+        ],
+        "styles": ["apps/nest-minimal-proxy/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/nest-minimal-proxy/src/environments/environment.ts",
+              "with": "apps/nest-minimal-proxy/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "nest-minimal-proxy:build:production"
+        },
+        "development": {
+          "browserTarget": "nest-minimal-proxy:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/nest-minimal-proxy/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "nest-minimal-proxy:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/nest-minimal-proxy/**/*.ts",
+          "apps/nest-minimal-proxy/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/nest-minimal-proxy"],
+      "options": {
+        "jestConfig": "apps/nest-minimal-proxy/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
