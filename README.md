@@ -2,13 +2,7 @@
 
 # NestMinimalProxy
 
-This project was generated using [Nx](https://nx.dev).
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
-
-🔎 **Smart, Fast and Extensible Build System**
-
-## Quick Start & Documentation
+## Quick Start
 
 clone this repo `git clone https://github.com/fonzane/nest-minimal-proxy`
 
@@ -17,6 +11,14 @@ install dependencies `npm install`
 run frontend dev-server `ng serve nest-minimal-proxy`
 
 run backend dev-server `ng serve api`
+
+This project was generated using [Nx](https://nx.dev).
+
+<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+
+🔎 **Smart, Fast and Extensible Build System**
+
+## Documentation
 
 [Nx Documentation](https://nx.dev/angular)
 
